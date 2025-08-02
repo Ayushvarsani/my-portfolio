@@ -30,7 +30,9 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 relative">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 relative bg-cover bg-center bg-no-repeat" 
+    >
+      {/* // style={{ backgroundImage: "url('/ayush.webp')" }} */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <motion.div
           variants={containerVariants}
