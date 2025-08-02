@@ -30,74 +30,75 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "Pharma 24/7",
+      description: "A comprehensive pharmaceutical management system designed for 24/7 pharmacy operations. Features include inventory management, prescription tracking, and customer management.",
+      image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=500&h=300&fit=crop",
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
       liveUrl: "#",
       githubUrl: "#",
       featured: true,
-      category: "Full Stack"
+      category: "Healthcare"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop",
-      technologies: ["React", "TypeScript", "Socket.io", "PostgreSQL"],
+      title: "Sarthibus",
+      description: "A modern bus booking and management platform that connects passengers with bus services. Features real-time tracking, seat booking, and payment integration.",
+      image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d7116?w=500&h=300&fit=crop",
+      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
       liveUrl: "#",
       githubUrl: "#",
       featured: true,
-      category: "Web App"
+      category: "Transportation"
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "A weather application that displays current weather conditions and forecasts using OpenWeatherMap API with beautiful visualizations.",
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=500&h=300&fit=crop",
-      technologies: ["React", "Chart.js", "OpenWeatherMap API"],
+      title: "NexQcard",
+      description: "A digital business card platform that allows users to create, share, and manage professional digital cards with QR code integration and contact management.",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop",
+      technologies: ["React", "QR Code API", "Firebase", "Tailwind CSS"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false,
-      category: "API Integration"
+      category: "Business"
     },
     {
       id: 4,
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website built with React and Framer Motion for smooth animations and interactions.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
-      technologies: ["React", "TypeScript", "Framer Motion", "Tailwind CSS"],
+      title: "Trestalent",
+      description: "A talent management and recruitment platform that connects employers with skilled professionals. Features include job posting, candidate matching, and interview scheduling.",
+      image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&h=300&fit=crop",
+      technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false,
-      category: "Frontend"
+      category: "Recruitment"
     },
     {
       id: 5,
-      title: "Chat Application",
-      description: "Real-time chat application with user authentication, message history, and file sharing capabilities.",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop",
-      technologies: ["React", "Socket.io", "Express", "MongoDB"],
+      title: "Boss",
+      description: "A comprehensive business management system designed for entrepreneurs and small business owners. Features include project management, financial tracking, and team collaboration.",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
+      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false,
-      category: "Real-time"
+      category: "Health & Fitness"
     },
     {
       id: 6,
-      title: "Recipe Finder",
-      description: "A recipe discovery app that helps users find recipes based on available ingredients and dietary preferences.",
-      image: "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&h=300&fit=crop",
-      technologies: ["React", "Spoonacular API", "CSS Grid"],
+      title: "AI Chat Assistant",
+      description: "An intelligent chatbot powered by machine learning that provides customer support, answers queries, and integrates with multiple platforms.",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecadf8a?w=500&h=300&fit=crop",
+      technologies: ["Python", "TensorFlow", "React", "WebSocket"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false,
-      category: "API Integration"
+      category: "AI/ML"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 relative overflow-hidden">
+    {/* <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 relative overflow-hidden"> */}
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -178,14 +179,14 @@ const Projects = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative"
         >
-          {/* Custom Navigation Buttons */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-4 z-10">
+          {/* Custom Navigation Buttons - Hidden on mobile */}
+          <div className="absolute top-1/2 -translate-y-1/2 left-4 z-10 hidden md:block">
             <button className="swiper-button-prev-custom bg-white/10 backdrop-blur-sm border border-white/20 text-white p-3 rounded-full hover:bg-white/20 transition-all duration-300 group">
               <ChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
             </button>
           </div>
           
-          <div className="absolute top-1/2 -translate-y-1/2 right-4 z-10">
+          <div className="absolute top-1/2 -translate-y-1/2 right-4 z-10 hidden md:block">
             <button className="swiper-button-next-custom bg-white/10 backdrop-blur-sm border border-white/20 text-white p-3 rounded-full hover:bg-white/20 transition-all duration-300 group">
               <ChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
             </button>
@@ -200,7 +201,7 @@ const Projects = () => {
             spaceBetween={30}
             loop={true}
             autoplay={{
-              delay: 5000,
+              delay: 10000,
               disableOnInteraction: false,
             }}
             coverflowEffect={{
@@ -320,13 +321,13 @@ const Projects = () => {
           </Swiper>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           variants={itemVariants}
           initial="hidden"
           animate="visible"
           className="text-center mt-16"
-        >
-          <motion.a
+        > */}
+          {/* <motion.a
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -336,8 +337,8 @@ const Projects = () => {
           >
             <Github className="w-5 h-5" />
             <span>View More on GitHub</span>
-          </motion.a>
-        </motion.div>
+          </motion.a> */}
+        {/* </motion.div> */}
       </div>
 
       <style>{`

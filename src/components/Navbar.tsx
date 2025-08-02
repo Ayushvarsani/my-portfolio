@@ -45,6 +45,12 @@ const Navbar = () => {
     { name: 'Contact', id: 'contact' },
   ];
 
+  // Determine text colors based on active section and scroll state
+  const isHomeActive = activeSection === 'home' && !scrolled;
+  const textColor = isHomeActive ? 'text-white' : 'text-gray-700';
+  const hoverColor = isHomeActive ? 'hover:text-cyan-400' : 'hover:text-blue-600';
+  const activeColor = isHomeActive ? 'text-cyan-400' : 'text-blue-600';
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -62,10 +68,26 @@ const Navbar = () => {
             onClick={() => scrollToSection('home')}
             className="flex items-center space-x-2"
           >
-            <img src="/av.svg" alt="Ayush Varsani" width={57} height={30} className='bg-transparent' />
+            <div className="relative">
+              <img 
+                src="/av.svg" 
+                alt="Ayush Varsani" 
+                width={57} 
+                height={30} 
+                className={`transition-all duration-300 ${
+                  isHomeActive 
+                    ? 'filter brightness-0 invert' // Make it white for dark background
+                    : 'bg-transparent'
+                }`}
+              />
+            </div>
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+              className={`text-2xl font-bold transition-all duration-300 ${
+                isHomeActive
+                  ? 'bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'
+                  : 'bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'
+              }`}
             >
               Ayush Varsani
             </motion.div>
@@ -79,15 +101,19 @@ const Navbar = () => {
                 onClick={() => scrollToSection(item.id)}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   activeSection === item.id
-                    ? 'text-blue-600'
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? activeColor
+                    : `${textColor} ${hoverColor}`
                 }`}
               >
                 {item.name}
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-blue-100 rounded-md -z-10"
+                    className={`absolute inset-0 rounded-md -z-10 transition-all duration-300 ${
+                      isHomeActive 
+                        ? 'bg-cyan-400/20' 
+                        : 'bg-blue-100'
+                    }`}
                     initial={false}
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   />
@@ -100,7 +126,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className={`transition-colors duration-200 ${textColor} ${hoverColor}`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -115,15 +141,19 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -20 }}
             className="md:hidden"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-lg">
+            <div className={`px-2 pt-2 pb-3 space-y-1 backdrop-blur-md rounded-lg mt-2 shadow-lg ${
+              isHomeActive 
+                ? 'bg-slate-800/95' 
+                : 'bg-white/95'
+            }`}>
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                     activeSection === item.id
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      ? `${activeColor} ${isHomeActive ? 'bg-cyan-400/20' : 'bg-blue-50'}`
+                      : `${textColor} ${hoverColor} ${isHomeActive ? 'hover:bg-slate-700/50' : 'hover:bg-gray-50'}`
                   }`}
                 >
                   {item.name}
