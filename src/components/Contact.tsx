@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 py-20 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-blue-50 to-purple-50 bg-gradient-to-t from-purple-50 via-blue-50 to-slate-50 pt-20 relative overflow-hidden">
       {/* Enhanced Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Large decorative dot */}
