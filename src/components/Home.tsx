@@ -461,7 +461,7 @@ const Home = () => {
               <Linkedin size={24} className="text-blue-400" />
             </motion.a>
             <motion.a
-              href="mailto:ayush@example.com"
+              href="mailto:ayushvarsani203@gmail.com"
               whileHover={{ 
                 scale: 1.1, 
                 y: -2,
@@ -481,7 +481,7 @@ const Home = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-[-105px] left-1/2 transform -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
