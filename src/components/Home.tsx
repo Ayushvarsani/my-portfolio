@@ -475,48 +475,48 @@ const Home = () => {
             </motion.a>
           </motion.div>
         </motion.div>
+      </div>
 
-        {/* Enhanced Tech-themed Scroll Indicator */}
+      {/* Enhanced Tech-themed Scroll Indicator - Moved outside main content */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+      >
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="absolute bottom-[-105px] left-1/2 transform -translate-x-1/2"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center relative"
         >
           <motion.div
-            animate={{ y: [0, 10, 0] }}
+            animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center relative"
-          >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
-            />
-            {/* Tech-themed rotating elements around scroll indicator */}
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-2 -left-2 w-2 h-2 bg-blue-500 rounded-full"
-            />
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-2 -right-2 w-2 h-2 bg-cyan-500 rounded-full"
-            />
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-              className="absolute -bottom-2 -left-2 w-2 h-2 bg-purple-500 rounded-full"
-            />
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
-              className="absolute -bottom-2 -right-2 w-2 h-2 bg-green-500 rounded-full"
-            />
-          </motion.div>
+            className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
+          />
+          {/* Tech-themed rotating elements around scroll indicator */}
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+            className="absolute -top-2 -left-2 w-2 h-2 bg-blue-500 rounded-full"
+          />
+          <motion.div
+            animate={{ rotate: -360 }}
+            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+            className="absolute -top-2 -right-2 w-2 h-2 bg-cyan-500 rounded-full"
+          />
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+            className="absolute -bottom-2 -left-2 w-2 h-2 bg-purple-500 rounded-full"
+          />
+          <motion.div
+            animate={{ rotate: -360 }}
+            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+            className="absolute -bottom-2 -right-2 w-2 h-2 bg-green-500 rounded-full"
+          />
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };
