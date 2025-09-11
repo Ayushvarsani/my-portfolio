@@ -50,39 +50,39 @@ const Projects = () => {
       featured: true,
       category: "Transportation"
     },
-    {
-      id: 3,
-      title: "NexQcard",
-      description: "A digital business card platform that allows users to create, share, and manage professional digital cards with QR code integration and contact management.",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop",
-      technologies: ["React", "QR Code API", "Firebase", "Tailwind CSS"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false,
-      category: "Business"
-    },
-    {
-      id: 4,
-      title: "Trestalent",
-      description: "A talent management and recruitment platform that connects employers with skilled professionals. Features include job posting, candidate matching, and interview scheduling.",
-      image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&h=300&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false,
-      category: "Recruitment"
-    },
-    {
-      id: 5,
-      title: "Boss",
-      description: "A comprehensive business management system designed for entrepreneurs and small business owners. Features include project management, financial tracking, and team collaboration.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
-      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false,
-      category: "Health & Fitness"
-    },
+    // {
+    //   id: 3,
+    //   title: "NexQcard",
+    //   description: "A digital business card platform that allows users to create, share, and manage professional digital cards with QR code integration and contact management.",
+    //   image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop",
+    //   technologies: ["React", "QR Code API", "Firebase", "Tailwind CSS"],
+    //   liveUrl: "#",
+    //   githubUrl: "#",
+    //   featured: false,
+    //   category: "Business"
+    // },
+    // {
+    //   id: 4,
+    //   title: "Trestalent",
+    //   description: "A talent management and recruitment platform that connects employers with skilled professionals. Features include job posting, candidate matching, and interview scheduling.",
+    //   image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&h=300&fit=crop",
+    //   technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
+    //   liveUrl: "#",
+    //   githubUrl: "#",
+    //   featured: false,
+    //   category: "Recruitment"
+    // },
+    // {
+    //   id: 5,
+    //   title: "Boss",
+    //   description: "A comprehensive business management system designed for entrepreneurs and small business owners. Features include project management, financial tracking, and team collaboration.",
+    //   image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
+    //   technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+    //   liveUrl: "#",
+    //   githubUrl: "#",
+    //   featured: false,
+    //   category: "Health & Fitness"
+    // },
     {
       id: 6,
       title: "AI Chat Assistant",
