@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#f3f6f4"/>
+  <rect width="640" height="64" fill="#101612"/>
+  <circle cx="28" cy="32" r="8" fill="#15803d"/>
+  <text x="46" y="38" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Sarthi Bus</text>
+  <text x="430" y="38" fill="#b7c9be" font-family="Arial, Helvetica, sans-serif" font-size="13">Booking</text>
+  <rect x="28" y="100" width="420" height="48" rx="10" fill="#ffffff"/>
+    <rect x="464" y="100" width="148" height="48" rx="10" fill="#15803d"/>
+    <rect x="28" y="172" width="584" height="72" rx="12" fill="#ffffff"/>
+    <rect x="28" y="260" width="584" height="72" rx="12" fill="#ffffff"/>
+</svg>

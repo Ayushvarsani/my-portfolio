@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#f3f6f4"/>
+  <rect width="640" height="64" fill="#101612"/>
+  <circle cx="28" cy="32" r="8" fill="#0f766e"/>
+  <text x="46" y="38" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Orbit One</text>
+  <text x="430" y="38" fill="#b7c9be" font-family="Arial, Helvetica, sans-serif" font-size="13">Enterprise</text>
+  <rect x="28" y="96" width="180" height="120" rx="12" fill="#ffffff"/>
+    <rect x="228" y="96" width="180" height="120" rx="12" fill="#ffffff"/>
+    <rect x="428" y="96" width="184" height="120" rx="12" fill="#ffffff"/>
+    <rect x="28" y="236" width="180" height="120" rx="12" fill="#ffffff"/>
+    <rect x="228" y="236" width="180" height="120" rx="12" fill="#ffffff"/>
+    <rect x="428" y="236" width="184" height="120" rx="12" fill="#ffffff"/>
+</svg>
